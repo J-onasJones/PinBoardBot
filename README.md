@@ -21,7 +21,11 @@ cd PinBoardBot
 ```
 https://discord.com/oauth2/authorize?client_id=CLIENT_IDscope=bot
 ```
-6. run the following command to start the bot (npm must be installed)
+6. install the required node modules with the following command:
+```
+npm install discord.js@13.1.0 dotenv
+```
+7. run the following command to start the bot (npm must be installed)
 ```
 npm start
 ```
