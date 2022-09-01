@@ -22,7 +22,7 @@ cd PinBoardBot
 4. paste the bot token and channel id for your "pins" text channel in the `config.json` file.
 5. Invite your newly created bot onto the server with the following link (replace `CLIENT_ID` with the client ID of your application):
 ```
-https://discord.com/oauth2/authorize?client_id=CLIENT_IDscope=bot
+https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot
 ```
 6. run the following command to start the bot (npm must be installed)
 ```
