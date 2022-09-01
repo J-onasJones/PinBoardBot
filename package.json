@@ -1,0 +1,29 @@
+{
+  "name": "pinboardbot",
+  "version": "0.1.0",
+  "description": "A discord bot that sends messages that you want to pin in a dedicated channel to avoid the pinned-messages limit per text-channel",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J-onasJones/PinBoardBot.git"
+  },
+  "keywords": [],
+  "author": "Jonas_Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J-onasJones/PinBoardBot/issues"
+  },
+  "homepage": "https://jonasjones.me/pinboardbot",
+  "dependencies": {
+    "discord.js": "^13.1.0",
+    "dotenv": "^16.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
