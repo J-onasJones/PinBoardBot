@@ -1,6 +1,9 @@
 # PinBoardBot
 A discord bot that aims to replace the discord built-in pin function as it is limited to 50 pins per channel.
 
+![image](https://user-images.githubusercontent.com/91549607/187810218-c2657705-795f-45db-8c93-14dac44704fa.png)
+
+
 
 **Known issue:** attachments such as pictures that were originally uploaded by the user cannot be pinned. *I'm working on a fix*
 
@@ -19,7 +22,7 @@ cd PinBoardBot
 4. paste the bot token and channel id for your "pins" text channel in the `config.json` file.
 5. Invite your newly created bot onto the server with the following link (replace `CLIENT_ID` with the client ID of your application):
 ```
-https://discord.com/oauth2/authorize?client_id=CLIENT_IDscope=bot
+https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot
 ```
 6. install the required node modules with the following command:
 ```
