@@ -1,6 +1,9 @@
 # PinBoardBot
 A discord bot that aims to replace the discord built-in pin function as it is limited to 50 pins per channel.
 
+![image](https://user-images.githubusercontent.com/91549607/187810218-c2657705-795f-45db-8c93-14dac44704fa.png)
+
+
 
 **Known issue:** attachments such as pictures that were originally uploaded by the user cannot be pinned. *I'm working on a fix*
 
