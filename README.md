@@ -28,7 +28,7 @@ https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot
 ```
 npm i
 ```
-7. run the following command to start the bot (npm must be installed)
+7. run the following command to start the bot (npm (any) and node version `18.8.x` must be installed)
 ```
 npm start
 ```
