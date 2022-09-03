@@ -26,7 +26,7 @@ https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot
 ```
 6. install the required node modules with the following command:
 ```
-npm install discord.js@13.1.0 dotenv
+npm i
 ```
 7. run the following command to start the bot (npm must be installed)
 ```
