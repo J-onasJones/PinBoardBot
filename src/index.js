@@ -36,11 +36,28 @@ client.on("messageCreate", message => {
                     } else {
     
                         try {
-    
-                            client.channels.fetch(pinchannelid).then(channel=>channel.send(msgtobepinned.url + "\n" + msgtobepinned.content)).then(msg => {
-        
+                                
+
+                            // inside a command, event listener, etc.
+                            const exampleEmbed = new MessageEmbed()
+                            .setColor('#0099ff')
+                            .setTitle('Pinned Message')
+                            .setURL('https://discord.js.org/')
+                            .setAuthor(msgtobepinned.author.username, msgtobepinned.author.avatarURL(false), "https://discord.js.org")
+                            .setDescription(msgtime.toDateString() + " " + msgtime.toLocaleTimeString("de-DE"))
+                            .setThumbnail('https://jonasjones.me/uploads/pinboardbot/pinboardlogo-smaller.png')
+                            .addFields(
+                                { name: ' :', value: msgtobepinned.content },
+                                { name: '\u200B', value: '\u200B' },
+                            )
+                            .addField('Original Message Link', msgtobepinned.url, true)
+                            .setTimestamp()
+                            .setFooter('A bot by Jonas_Jones @ https://github.com/J-onasJones/PinBoardBot/','https://cdn.discordapp.com/avatars/627930249811984441/5c5ce5730995ef801f163e3625928f35.webp');
+
+                            client.channels.fetch(pinchannelid).then(channel=>channel.send({ embeds: [exampleEmbed] }).then(msg => {
+
                                 logger(message.author.tag + " pinned " + msgtobepinned.content);
-        
+    
                                 // client.channels.resolveId(pingchannelid).then(pingchannel => {
         
                                 //     message.pingchannel.send("Pinned message: " + msgtobepinned.content);
@@ -50,27 +67,7 @@ client.on("messageCreate", message => {
                                 message.reply("Message pinned!");
                                 msgtime = new Date();
 
-                                // inside a command, event listener, etc.
-                                const exampleEmbed = new MessageEmbed()
-                                .setColor('#0099ff')
-                                .setTitle('Pinned Message')
-                                .setURL('https://discord.js.org/')
-                                .setAuthor(msgtobepinned.author.username, msgtobepinned.author.avatarURL(false), "https://discord.js.org")
-                                .setDescription(msgtime.toDateString() + " " + msgtime.toLocaleTimeString("de-DE"))
-                                .setThumbnail('https://jonasjones.me/uploads/pinboardbot/pinboardlogo-smaller.png')
-                                .addFields(
-                                    { name: ' :', value: msgtobepinned.content },
-                                    { name: '\u200B', value: '\u200B' },
-                                )
-                                .addField('Original Message Link', msgtobepinned.url, true)
-                                .setTimestamp()
-                                .setFooter('A bot by Jonas_Jones @ https://github.com/J-onasJones/PinBoardBot/','https://cdn.discordapp.com/avatars/627930249811984441/5c5ce5730995ef801f163e3625928f35.webp');
-
-                            message.channel.send({ embeds: [exampleEmbed] });
-
-                            message.channel.send(msgtobepinned.author.displayAvatarURL()); 
-                                
-                            });
+                            }));
         
                         } catch (errormsg) {
                             logger(message.author.tag + " tried to pin but error occured: " + errormsg);
